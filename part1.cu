@@ -158,10 +158,10 @@ void CPU_Test(int data[], int result[], int sizeX, int sizeY) {
 		for (int col = 0; col < sizeX; ++col) {
 			int h = 0;
 			int const idx = row_base + col;
-			int tl = (row - 1 > 0 && col - 1 > 0)     		? data[idx - sizeX - 1] 	: 0;
-			int tp = (row - 1 > 0) 				      		? data[idx - sizeX] 		: 0;
-			int tr = (row - 1 > 0 && col + 1 < sizeY) 		? data[idx - sizeX + 1]		: 0;
-			int cl = (col - 1 > 0) 					  		? data[idx - 1] 			: 0;
+			int tl = (row - 1 > 0 && col - 1 > 0)			? data[idx - sizeX - 1] 	: 0;
+			int tp = (row - 1 > 0)							? data[idx - sizeX] 		: 0;
+			int tr = (row - 1 > 0 && col + 1 < sizeY)		? data[idx - sizeX + 1]		: 0;
+			int cl = (col - 1 > 0)							? data[idx - 1] 			: 0;
 			int c  = 										  data[idx];
 			int cr = (col + 1 < sizeY) 				  		? data[idx + 1] 			: 0;
 			int bl = (row + 1 < sizeX && col - 1 > 0) 		? data[idx + sizeX - 1]		: 0;
